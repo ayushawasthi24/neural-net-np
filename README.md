@@ -51,7 +51,7 @@ The CLI allows you to train and test the neural network directly from the comman
 
 #### Example Usage:
 ```bash
-python cli.py --layers 2 5 1 --activation relu --epochs 500 --learning_rate 0.1 --samples 200 --features 2 --visualize
+python cli.py --layers 2 5 1 --activation relu --epochs 5000 --learning_rate 0.1 --samples 200 --features 2 --visualize
 ```
 
 ### 1. Initialize the Neural Network
