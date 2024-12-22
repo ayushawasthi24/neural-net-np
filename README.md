@@ -10,18 +10,20 @@ This project implements a basic neural network from scratch using Python and Num
 - Loss visualization during training
 - Prediction and visualization of model performance
 - Supports multi-layer feedforward neural networks
+- **Command-Line Interface (CLI) Support**
 
 ## Requirements
 
 - Python 3.x
 - NumPy
+- Matplotlib (For visualization)
 
 ### Install dependencies:
 
 You can install the necessary dependencies using pip:
 
 ```bash
-pip install numpy
+pip install numpy matplotlib
 ```
 
 ## Project Structure
@@ -29,9 +31,28 @@ pip install numpy
 The project consists of the following main files:
 
 - `nn.py`: The main neural network implementation with forward propagation, backpropagation, and training functionality.
+- `cli_usage.py`: Command-line interface to train and test the neural network.
 - `visualize.py`: Visualization module (optional) to display loss and predictions during training.
+- `main.py`: Sample usage by creating a random dataset
 
 ## Usage
+
+### CLI Usage
+The CLI allows you to train and test the neural network directly from the command line.
+
+#### Arguments:
+- `--layers`: List of layers in the neural network (e.g., `2 5 1` for 2 input, 5 hidden, 1 output). **Required**.
+- `--activation`: Activation function to use (`relu` or `sigmoid`). Default: `relu`.
+- `--epochs`: Number of epochs for training. Default: `1000`.
+- `--learning_rate`: Learning rate for training. Default: `0.01`.
+- `--samples`: Number of samples in the dataset. Default: `100`.
+- `--features`: Number of features in the dataset. Default: `2`.
+- `--visualize`: Add this flag to visualize predictions and training loss.
+
+#### Example Usage:
+```bash
+python cli.py --layers 2 5 1 --activation relu --epochs 500 --learning_rate 0.1 --samples 200 --features 2 --visualize
+```
 
 ### 1. Initialize the Neural Network
 
